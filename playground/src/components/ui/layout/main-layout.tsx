@@ -6,7 +6,6 @@ import { AppSidebar } from "./app-sidebar";
 export function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      {/* <div className="flex min-h-screen w-full"> */}
       <AppSidebar variant="inset" />
       <SidebarInset>
         <AppHeader />
@@ -18,7 +17,6 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </SidebarInset>
-      {/* </div> */}
     </SidebarProvider>
   );
 }

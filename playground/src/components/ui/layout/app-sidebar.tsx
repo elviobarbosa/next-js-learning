@@ -1,5 +1,5 @@
 "use client";
-import { CodeXml, FileText, Home, Settings, Users } from "lucide-react";
+import { Code, CodeXml, FileText, Home, Settings, Users } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -11,9 +11,10 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { title } from "process";
 
 const items = [
-  { title: "Início", url: "/", icon: Home },
+  { title: "About", url: "/", icon: Code },
   { title: "Usuários", url: "/usuarios", icon: Users },
   { title: "Documentos", url: "/documentos", icon: FileText },
   { title: "Configurações", url: "/configuracoes", icon: Settings },
