@@ -1,11 +1,11 @@
 "use client";
-import { FileText, Home, Settings, Users } from "lucide-react";
+import { CodeXml, FileText, Home, Settings, Users } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -19,12 +19,18 @@ const items = [
   { title: "Configurações", url: "/configuracoes", icon: Settings },
 ];
 
-export function AppSidebar({ ...props }: { variant?: "inset" | "sidebar" }) {
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
+      <SidebarHeader>
+        <div className="flex items-center">
+          <CodeXml />
+          <h1 className="text-base font-semibold">ELVIO BARBOSA</h1>
+        </div>
+        <h2 className="text-sm">Senior Frontend Dev.</h2>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Main menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

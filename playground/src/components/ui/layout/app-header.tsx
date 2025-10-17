@@ -10,6 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Button } from "../button";
 
 export function AppHeader() {
   return (
@@ -29,12 +30,4 @@ export function AppHeader() {
       </Breadcrumb>
     </header>
   );
-  // return (
-  //   <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4">
-  //     <SidebarTrigger />
-  //     <div className="flex items-center gap-2">
-  //       <h1 className="text-lg font-semibold">Dashboard</h1>
-  //     </div>
-  //   </header>
-  // );
 }
