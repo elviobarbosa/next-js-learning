@@ -10,7 +10,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "../button";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -19,6 +18,12 @@ export function AppHeader() {
   const segments = pathName.split("/").filter(Boolean);
   const buildHref = (index: number) =>
     "/" + segments.slice(0, index + 1).join("/");
+
+  const labels: Record<string, string> = {
+    usuarios: "Usuários",
+    documentos: "Documentos",
+    configuracoes: "Configurações",
+  };
 
   return (
     <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
@@ -34,8 +39,8 @@ export function AppHeader() {
             const isLast = index === segment.length - 1;
             const href = buildHref(index);
             const label =
-              segment.charAt(0).toUpperCase +
-              segment.slice(1).replace(/-/g, " ");
+              labels[segment] ||
+              segment.charAt(0).toUpperCase() + segment.slice(1);
 
             return (
               <React.Fragment key={href}>
