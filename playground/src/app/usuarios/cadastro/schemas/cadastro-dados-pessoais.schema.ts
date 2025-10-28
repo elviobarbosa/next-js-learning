@@ -1,6 +1,8 @@
 import { z } from "zod";
+import { TipoPessoaEnum } from "../entities/cadastro.entities";
 
 export const cadastroDadosPessoaisSchema = z.object({
+  tipoPessoa: z.enum(TipoPessoaEnum),
   nomeRazaoSocial: z
     .string()
     .min(2, "O Nome/Razão Social deve ter no mínimo 2 caracteres"),

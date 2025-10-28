@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div className="max-w-4xl mx-auto px-6 py-12 w-full">
       <h2 className="text-4xl font-bold mb-4">Elvio Castro Barbosa</h2>
       <h1 className="text-2xl font-semibold mb-6">
         Senior Frontend Developer Angular | Typescript | Next.js, NestJS,
